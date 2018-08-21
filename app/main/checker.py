@@ -5,6 +5,7 @@ from flask import make_response, jsonify
 
 def question_already_exist(id):
     ''' check if an object exist'''
+    #id question exists in dictionarry
     if id in ALL_QUESTIONS:
         return make_response(jsonify({'message': 'Question already exists'})), 409
     return False
