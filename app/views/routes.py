@@ -9,7 +9,7 @@ from ..models import models
 from uuid import uuid4
 import random
 from ..models.models import ALL_QUESTIONS
-from app import app
+from .. import app
 #all_questions = list()
 all_answers = list()
 
