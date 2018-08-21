@@ -1,1 +1,1 @@
-from . import app
+from stackoverflow_api.app import app
