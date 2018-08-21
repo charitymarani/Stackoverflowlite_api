@@ -1,5 +1,5 @@
 from flask_jwt_extended import get_jwt_identity, jwt_required, get_raw_jwt
-from app.models import models
+from ..models import models
 
 MY_USER = models.Users()
 
