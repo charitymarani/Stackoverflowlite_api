@@ -63,6 +63,7 @@ def register():
 
 
 @app.route('/api/v1/auth/login', methods=['POST'])
+@jwt_required
 def login():
     '''login user by verifying password and creating an access token'''
     data = request.get_json()
