@@ -21,39 +21,6 @@ MY_USER = models.Users()
 jwt = JWTManager(app)
 BLACKLIST = set()
 
-'''Error handlers'''
-
-
-@app.errorhandler(400)
-def bad_request(error):
-    '''error handler for Bad request'''
-    return jsonify(dict(error='Bad request')), 400
-
-
-@app.errorhandler(404)
-def page_not_found(error):
-    '''error handler for 404'''
-    return jsonify(dict(error='Page not found')), 404
-
-
-@app.errorhandler(405)
-def unauthorized(error):
-    '''error handler for 405'''
-    return jsonify(dict(error='Method not allowed')), 405
-
-
-@app.errorhandler(500)
-def internal_server_error(error):
-    '''error handler for 500'''
-    return jsonify(dict(error='Internal server error')), 500
-
-
-@app.route('/')
-def home():
-    '''method to render documentation'''
-    return '<h1>Welcome to stackoverflowlite</h1>'
-
-
 '''user actions'''
 
 
@@ -104,12 +71,6 @@ def login():
     username = data.get('username')
     password = data.get('password')
     auth = MY_USER.verify_password(username, password)
-
-    if auth == "True":
-        access_token = create_access_token(identity=username)
-        return jsonify(dict(token=access_token,
-                            message="Login successful")), 200
-
     response = jsonify(auth)
     response.status_code = 401
     return response
