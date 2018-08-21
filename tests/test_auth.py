@@ -2,12 +2,12 @@ import unittest
 import json
 import ast
 from flask_jwt_extended import get_jwt_identity, create_access_token
-from .. import app
-from app.views.routes import all_answers
-from app.models.models import USERS
-from app.models.models import ALL_QUESTIONS
-from app.views.routes import BLACKLIST
-from app.models import models
+from ..app import app
+from ..app.views.routes import all_answers
+from ..app.models.models import USERS
+from ..app.models.models import ALL_QUESTIONS
+from ..app.views.routes import BLACKLIST
+from ..app.models import models
 
 MY_USER = models.Users()
 
