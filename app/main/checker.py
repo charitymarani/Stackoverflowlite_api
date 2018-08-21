@@ -1,5 +1,5 @@
 '''checker.py'''
-from app.models.models import ALL_QUESTIONS
+from ..models.models import ALL_QUESTIONS
 from flask import make_response, jsonify
 
 
