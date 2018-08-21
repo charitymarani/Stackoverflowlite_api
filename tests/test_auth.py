@@ -2,7 +2,7 @@ import unittest
 import json
 import ast
 from flask_jwt_extended import get_jwt_identity, create_access_token
-from . import app
+from .. import app
 from app.views.routes import all_answers
 from app.models.models import USERS
 from app.models.models import ALL_QUESTIONS
