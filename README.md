@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/charitymarani/Stackoverflowlite_api.svg?branch=Develop)](https://travis-ci.org/charitymarani/Stackoverflowlite_api)
 [![Coverage Status](https://coveralls.io/repos/github/charitymarani/Stackoverflowlite_api/badge.svg?branch=Develop)](https://coveralls.io/github/charitymarani/Stackoverflowlite_api?branch=Develop)
 # StackOverflowlite_api
 ### WHAT?
