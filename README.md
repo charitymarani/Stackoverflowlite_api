@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/charitymarani/Stackoverflowlite_api/badge.svg?branch=Develop)](https://coveralls.io/github/charitymarani/Stackoverflowlite_api?branch=Develop)
 # StackOverflowlite_api
 ### WHAT?
 
