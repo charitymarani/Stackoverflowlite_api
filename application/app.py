@@ -4,8 +4,8 @@ from flask_restful import Api
 
 
 def create_app(config_name):
-    from application import (
-        PostQuestion, PostAnswer, GetAllQuestions, GetSingleQuestion, DeleteQuestion, AcceptAnswer)
+    from . import (
+        PostQuestion, PostAnswer, GetAllQuestions, GetSingleQuestion, DeleteQuestion)
 
     app = Flask(__name__, template_folder='./templates',
                 static_folder='./static')
