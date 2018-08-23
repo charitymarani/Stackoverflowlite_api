@@ -18,6 +18,4 @@ def create_app(config_name):
     api.add_resource(GetSingleQuestion, '/api/v1/questions/<int:question_id>')
     api.add_resource(DeleteQuestion, '/api/v1/questions/<int:question_id>')
     api.add_resource(PostAnswer, '/api/v1/questions/<int:question_id>/answers')
-    api.add_resource(
-        AcceptAnswer, '/api/v1/questions/<int:question_id>/answers/<answer_id>')
     return app
