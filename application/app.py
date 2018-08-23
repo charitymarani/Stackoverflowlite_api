@@ -1,5 +1,5 @@
 from flask import Flask
-from instance import app_config
+from ..instance import app_config
 from flask_restful import Api
 
 
