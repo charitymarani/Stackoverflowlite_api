@@ -1,7 +1,7 @@
 import unittest
 import json
 import ast
-from application import create_app
+from ..application import create_app
 
 
 class TestBase(unittest.TestCase):
