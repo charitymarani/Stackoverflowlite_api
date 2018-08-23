@@ -2,10 +2,10 @@ import re
 from flask import Flask, request, jsonify, make_response
 from uuid import uuid4
 from flask_restful import Resource
-from application.models import Questions, Answers, ALL_QUESTIONS
-from application.views.checker import question_already_exist, answer_already_exist
-from application import models
-from application import app
+from ..models import Questions, Answers, ALL_QUESTIONS
+from ..views.checker import question_already_exist, answer_already_exist
+from .. import models,app
+
 all_answers = list()
 
 MY_QUESTION = models.Questions()
