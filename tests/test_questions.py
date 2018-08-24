@@ -2,7 +2,7 @@ import unittest
 import json
 import ast
 from flask_jwt_extended import get_jwt_identity, create_access_token
-from application import create_app
+from ..application import create_app
 
 
 class TestBase(unittest.TestCase):
