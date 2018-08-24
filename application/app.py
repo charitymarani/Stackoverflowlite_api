@@ -4,7 +4,7 @@ from psycopg2.extras import RealDictCursor
 from urllib.parse import urlparse
 from flask import Flask
 from flask_jwt_extended import JWTManager
-from instance import app_config, DATABASE_URL
+from ..instance import app_config, DATABASE_URL
 from flask_restful import Api
 from application.models.models import BlackList
 
