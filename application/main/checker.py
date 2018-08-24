@@ -12,7 +12,7 @@ def question_already_exist(id):
     return False
 
 
-def answer_already_exist(list_, object_key, object_attr):
+def answer_already_exist(id):
     ''' find out if an object exist'''
     if id in all_answers:
         return make_response(jsonify({'message': 'Answer already exists'})), 409
