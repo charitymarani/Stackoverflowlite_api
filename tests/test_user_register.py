@@ -7,7 +7,7 @@ from manage import Migration
 
 
 class RegisterUserTestCase(unittest.TestCase):
-    '''class representing BookModel Test case'''
+    '''class representing registration Test case'''
 
     def setUp(self):
         self.app = create_app(config_name="testing")
