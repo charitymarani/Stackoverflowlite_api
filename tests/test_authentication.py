@@ -7,7 +7,7 @@ from manage import Migration
 
 
 class TestBase(unittest.TestCase):
-    '''class to tests app.py'''
+    '''class to test authentication'''
 
     def setUp(self):
         '''create a test client'''
