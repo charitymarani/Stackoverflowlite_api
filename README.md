@@ -1,4 +1,4 @@
-# StackOverflowlite-UI
+# StackOverflowlite-api
 ### WHAT?
 
 Stackoverflowlite is a web application that allows  people to ask questions and provide answers 
