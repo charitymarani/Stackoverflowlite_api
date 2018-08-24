@@ -151,7 +151,7 @@ class AcceptAnswer(Resource):
         if answers == []:
             return {"message": "No answers for this question"}, 404
 
-        answer_list = answer_already_exist(allanswers, 'ans_id', answer_id)
+        answer_list = answer_already_exist( answer_id)
         if answer_list:
             for ans in answers:
                 if ans['accepted'] != False:
