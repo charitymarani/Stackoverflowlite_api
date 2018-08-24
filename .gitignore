@@ -39,6 +39,7 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .coverage
+.coveragerc
 .coverage.*
 .cache
 nosetests.xml
@@ -98,7 +99,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-
+/site
 
 # mypy
 .mypy_cache/
