@@ -1,6 +1,6 @@
 '''manage.py - Database migration configuration'''
-from stackoverflow.api.v2.models import (
-    User, blackList,
+from application.models.models import (
+    User, BlackList,
     Question, Answer
 )
 question = Question()
@@ -15,17 +15,15 @@ class DBMigration(object):
         User.create_table()
         question.create_table()
         answer.create_table()
-        blackList.create_table()
+        BlackList.create_table()
 
     @staticmethod
     def drop_tables():
         """drops all the tables"""
-        answer = Answer()
-        quiz = Question()
-        my_list = [answer, quiz]
+        my_list = [answer, quetion]
         for i in my_list:
             i.drop_all()
-        blackList.drop_all()
+        BlackList.drop_all()
         User.drop_all()
 
 
