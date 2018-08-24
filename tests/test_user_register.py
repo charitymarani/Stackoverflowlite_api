@@ -3,7 +3,7 @@ import unittest
 import json
 import ast
 from ..application import create_app
-from manage import DBMigration
+from manage import Migration
 
 
 class RegisterUserTestCase(unittest.TestCase):
@@ -11,7 +11,7 @@ class RegisterUserTestCase(unittest.TestCase):
 
     def setUp(self):
         self.app = create_app(config_name="testing")
-        self.migrate = DBMigration()
+        self.migrate = Migration()
         self.client = self.app.test_client
 
         with self.app.app_context():
