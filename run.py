@@ -1,8 +1,4 @@
 from application import create_app
-
-
-from stackoverflow import create_app
-from stackoverflow import settings
 from manage import DBMigration
 
 migrate = DBMigration()
