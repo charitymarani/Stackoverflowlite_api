@@ -1,7 +1,6 @@
 # StackOverflowlite-api
 ### WHAT?
-
-Stackoverflowlite is a web application that allows  people to ask questions and provide answers 
+stackoverflowlite api is a RESTful Flask application for a simple application that allows users to post and give answers on the platform. Questions can be added, deleted, retrieved and through endpoints. A user can answer questions through the endpoints too.
 
 #### REQUIRED FEATURES
 
@@ -20,17 +19,15 @@ Stackoverflowlite is a web application that allows  people to ask questions and 
 4. Users can search for questions on the platform
 5. Users can view questions with the most answers.
 ### TECHNOLOGY
-1. HTML
-2. CSS
-3.Javascript
-###TOOLS
+1. Python
+2. Flask
+3.Postgresql database
+### TOOLS
 1. Pivotal tracker project management tool
 ### SCREENSHOTS
 Coming soon
 ### GETTING STARTED
-git clone https://github.com/charitymarani/StackOverflowlite-UI.git
-
-cd UI Then open index.html in your browser
+git clone https://github.com/charitymarani/StackOverflowlite.git
 ### CONTRIBUTING
 You can always contribute though the project is still underway.
 ### AUTHOR
