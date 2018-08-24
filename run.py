@@ -1,7 +1,7 @@
 from application import create_app
-from manage import DBMigration
+from manage import Migration
 
-migrate = DBMigration()
+migrate = Migration()
 config_name = 'development'
 app = create_app(config_name)
 
