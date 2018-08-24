@@ -1,1 +1,1 @@
-from .app import database_config
+from .. import database_config
