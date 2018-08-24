@@ -11,7 +11,7 @@ class TestBase(unittest.TestCase):
     def setUp(self):
         '''create a test client'''
         self.app = create_app(config_name="testing")
-        self.migrate = DBMigration()
+        self.migrate = Migration()
         self.client = self.app.test_client
         self.question = { "topic": "java",
                           "title": "What is java", "details": "i want to know",
