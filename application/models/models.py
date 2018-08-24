@@ -8,8 +8,8 @@ from .initialize_models import (
     Users,
     Questions, Answers
 )
-from ..application.main.queries import query1, query2, query3, query4
-from ..application.app import database_config
+from ..main.queries import query1, query2, query3, query4
+from ..app import database_config
 from ..instance import config
 
 
