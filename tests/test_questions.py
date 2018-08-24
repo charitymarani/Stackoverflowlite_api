@@ -194,7 +194,7 @@ class TestBase(unittest.TestCase):
                 ),
                 data=json.dumps(dict(
                     title='what wa sthat',
-                    topic='python'
+                    topic='python',
                     details='how is git used?'
                 )),
                 content_type='application/json'
