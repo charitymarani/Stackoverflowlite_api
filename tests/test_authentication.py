@@ -11,7 +11,7 @@ class TestBase(unittest.TestCase):
     def setUp(self):
         '''create a test client'''
         self.app = create_app(config_name="testing")
-        self.migrate = DBMigration()
+        self.migrate = Migration()
         self.client = self.app.test_client
         self.client().post('/api/v1/auth/register', content_type='application/json', data=json.dumps(
             {"name": "chari", "username": "charity", "email": "charity@gmail.com", "password": "Test123", "confirm_password": "Test123"}))
