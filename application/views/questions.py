@@ -3,9 +3,9 @@ from flask import Flask, request, jsonify, make_response
 from flask_restful import Resource
 from flask_jwt_extended import (
     JWTManager, jwt_required, create_access_token, get_raw_jwt, get_jwt_identity)
-from ..application.models import Question, Answer
-from ..application.main.checker import question_already_exist, answer_already_exist
-from ..application import app
+from ..models import Question, Answer
+from ..main.checker import question_already_exist, answer_already_exist
+from .. import app
 
 
 '''question related routes'''
