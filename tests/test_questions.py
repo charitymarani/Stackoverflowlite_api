@@ -13,8 +13,8 @@ class TestBase(unittest.TestCase):
         self.app = create_app(config_name="testing")
         self.migrate = DBMigration()
         self.client = self.app.test_client
-        self.question = {"question_id": 23, "topic": "java",
-                          "title": "What is java", "details": "",
+        self.question = { "topic": "java",
+                          "title": "What is java", "details": "i want to know",
                           "answers": [{"1": "Java is an oop language"}]
                           }
         # register and login 2  users
@@ -23,13 +23,14 @@ class TestBase(unittest.TestCase):
         result1 = self.client().post(
             '/api/v1/auth/login', content_type="application/json", data=json.dumps({"username": "jay", "password": "Test123"}))
         user_login = ast.literal_eval(result1.data.decode())
-        self.user_token = user_login["token"]
+       
+        self.user_token = json.loads(user_login.data)['token']
         self.client().post('/api/v1/auth/register', content_type="application/json", data=json.dumps(
             {"name": "Sasha", "username": "sasha", "email": "sasha@gmail.com", "password": "Test123", "confirm_password": "Test123"}))
         result2 = self.client().post('/api/v1/auth/login', content_type="application/json",
                                      data=json.dumps({"username": "sasha", "password": "Test123"}))
         user2_login = ast.literal_eval(result2.data.decode())
-        self.user2_token = user2_login["token"]
+        self.user2_token = json.loads(user_login2.data)['token']
         with self.app.app_context():
             self.migrate.create_all()
        
@@ -64,8 +65,7 @@ class TestBase(unittest.TestCase):
                                   headers=dict(
                                       Authorization='Bearer ' + self.user2_token),
                                   data=json.dumps(dict(
-                                      ans_id="1",
-
+                                     
                                       answer='the answer is this and that'
                                   )),
                                   content_type='application/json'
@@ -80,7 +80,7 @@ class TestBase(unittest.TestCase):
                                       Authorization='Bearer ' + self.user2_token),
                                   data=json.dumps(dict(
                                       answer='the answer is this and that',
-                                      ans_id=1)),
+                                      )),
                                   content_type='application/json')
         response_data = ast.literal_eval(resp.data.decode())
 
