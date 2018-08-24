@@ -21,7 +21,7 @@ stackoverflowlite api is a RESTful Flask application for a simple application th
 ### TECHNOLOGY
 1. Python
 2. Flask
-3.Postgresql database
+3. Postgresql database
 ### TOOLS
 1. Pivotal tracker project management tool
 ### SCREENSHOTS
