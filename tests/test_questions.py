@@ -148,5 +148,65 @@ class TestBase(unittest.TestCase):
         # test to check whether deleted item exists
         result = self.client().get('/api/v1/questions/1')
         self.assertIn("Question not found", str(result.data))
+    def test_user_retrieves_all_answers(self):
+        """Test user can retrieve all answers to a question"""
+        with self.client:
+            resp = self.client.post(
+                '/api/v2/questions',
+                headers=dict(
+                    Authorization='Bearer ' + self.user_token
+                     
+                    
+                ),
+                data=json.dumps(dict(
+                    title='psycopg2',
+                    topic='databases',
+                    details='How is psycopg2 used?'
+                )),
+                content_type='application/json'
+            )
+            resp = self.client.post(
+                '/api/v2/questions/1/answers',
+                headers=dict(
+                    Authorization='Bearer ' + self.user_token
+                ),
+                data=json.dumps(dict(
+                    answer='foloow this link to learn'
+                )),
+                content_type='application/json'
+            )
+            resp = self.client.get(
+                '/api/v2/questions/1/answers',
+                headers=dict(
+                    Authorization='Bearer ' + self.user_token
+                )
+            )
+            response_data = json.loads(resp.data.decode())
+            self.assertEqual(resp.status_code, 200)
+            
+      def test_user_retrieves_all_their_questions(self):
+        """Test user can retrieve all their questions"""
+        with self.client:
+            resp = self.client.post(
+                '/api/v2/questions',
+                headers=dict(
+                    Authorization='Bearer ' + self.user2_token
+                ),
+                data=json.dumps(dict(
+                    title='what wa sthat',
+                    topic='python'
+                    details='how is git used?'
+                )),
+                content_type='application/json'
+            )
+            resp = self.client.get(
+                '/api/v2/questions/myquestions',
+                headers=dict(
+                    Authorization='Bearer ' + self.user2_token
+                )
+            )
+            response_data = json.loads(resp.data.decode())
+            self.assertEqual(resp.status_code, 200)
+
 
    
