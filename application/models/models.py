@@ -9,7 +9,7 @@ from .initialize_models import (
     Questions, Answers
 )
 from ..main.queries import query1, query2, query3, query4
-from .. import database_config
+from application import database_config
 from ..instance import config
 
 
