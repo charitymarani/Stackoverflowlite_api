@@ -184,9 +184,9 @@ class TestBase(unittest.TestCase):
             response_data = json.loads(resp.data.decode())
             self.assertEqual(resp.status_code, 200)
             
-      def test_user_retrieves_all_their_questions(self):
-        """Test user can retrieve all their questions"""
-        with self.client:
+     def test_user_retrieves_all_their_questions(self):
+         """Test user can retrieve all their questions"""
+         with self.client:
             resp = self.client.post(
                 '/api/v2/questions',
                 headers=dict(
