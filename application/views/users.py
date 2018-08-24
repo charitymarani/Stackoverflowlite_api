@@ -6,12 +6,12 @@ from flask_jwt_extended import (
     JWTManager, jwt_required, create_access_token, get_raw_jwt, get_jwt_identity)
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_restful import Resource
-from application.main.current_user import get_logged_in_user
-from application.models import Questions, Answers, User, Blacklist
-from application.main.checker import question_already_exist, answer_already_exist
-from application import models
-from application.main.validate import Validate
-from application import blacklist
+from ..application.main.current_user import get_logged_in_user
+from ..application.models import Questions, Answers, User, Blacklist
+from ..application.main.checker import question_already_exist, answer_already_exist
+from ..application import models
+from ..application.main.validate import Validate
+from ..application import blacklist
 
 
 class Register(Resource):
