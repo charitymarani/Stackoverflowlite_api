@@ -7,7 +7,7 @@ question = Question()
 answer = Answer()
 
 
-class DBMigration(object):
+class Migration(object):
 
     @staticmethod
     def create_all():
